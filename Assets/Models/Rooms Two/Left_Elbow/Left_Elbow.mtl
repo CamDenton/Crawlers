@@ -1,0 +1,13 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.35440475)
+
+newmtl palette
+kd 1 1 1
+ka 0 0 0
+ks 0 0 0
+ke 0 0 0
+d 1
+Ns 384.314
+illum 2
+map_kd C:\\Users\\Cam\\Documents\\Unity Projects\\Crawlers2018_2\\Assets\\Models\\rooms\\Left-Elbow\\Left-Elbow-Room-00.png
+

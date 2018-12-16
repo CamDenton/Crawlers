@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a15278e57142543afce3d7248b8295, type: 3}
+  m_Name: Mage
+  m_EditorClassIdentifier: 
+  playerName: 
+  className: 
+  currentHealth: 0
+  maxHealth: 100
+  armor: 0
+  currentStamina: 0
+  maxStamina: 75
+  currentMana: 0
+  maxMana: 100
+  attack: 10
+  intelligence: 20
+  weight: 10
+  speed: 7

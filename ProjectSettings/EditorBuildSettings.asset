@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ScnMainMenu.unity
+    guid: 7b13c452b16baab4f905c4984411027c
+  - enabled: 1
+    path: Assets/Scenes/ScnPlayerSetup.unity
+    guid: 875e62b5a57f8e64bae175c50e31a266
+  - enabled: 1
+    path: Assets/Scenes/dungeonCrawlers.unity
+    guid: bc76fb9562ed4af4b938ce7c7490532d
+  - enabled: 1
+    path: Assets/Scenes/FL1_2.unity
+    guid: a68b91b899540a9429c84b7ce94d399b
+  - enabled: 1
+    path: Assets/Scenes/F1_3.unity
+    guid: 56534f5b53adad846a78d53ad6d032f4
+  m_configObjects: {}

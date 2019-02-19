@@ -14,15 +14,22 @@ public class FadeAway : MonoBehaviour, Special {
     public Animator anim;
     public GameObject playerObject;
     public GameObject effect;
+    FadeAway fade;
 
     public void Activate()
     {
+        if (fade.enabled == true)
+        {
+
+       
         Instantiate(effect, playerV, Quaternion.identity);
         stats.ChangeStamina(cost);
         playerObject.tag = "Untagged";
         cDActive = true;
         anim.SetBool("Special", false);
         StartCoroutine(Ongoing(cooldown));
+
+        }
 
     }
 
@@ -50,6 +57,8 @@ public class FadeAway : MonoBehaviour, Special {
     void Start () {
         anim = GetComponent<Animator>();
         playerObject = gameObject;
+        fade = GetComponent<FadeAway>();
+
         if (gameObject.GetComponent<PlayerMov>())
         {
             specialButton = "SpecialP1";

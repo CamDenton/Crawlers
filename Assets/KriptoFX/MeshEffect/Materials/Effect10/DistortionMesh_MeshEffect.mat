@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: DistortionMesh_MeshEffect
   m_Shader: {fileID: 4800000, guid: 972a05a1fafc1c54d8287892f2a939b6, type: 3}
-  m_ShaderKeywords: USE_FRESNEL USE_HEIGHT USE_MAINTEX _ZWRITEMODE_ON
+  m_ShaderKeywords: USE_FRESNEL USE_HEIGHT USE_MAINTEX USE_SOFT_PARTICLES _ZWRITEMODE_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -84,11 +84,11 @@ Material:
     - _DstBlend: 0
     - _FPOW: 1
     - _FresnelDistort: 1500
-    - _FresnelPow: 1
+    - _FresnelPow: 1.72
     - _FresnelR0: 0.05
     - _Glossiness: 0.5
     - _Height: 0
-    - _InvFade: 0
+    - _InvFade: 1.22
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -104,16 +104,16 @@ Material:
     - _UseHeight: 1
     - _UseMainTex: 1
     - _UseRefractive: 0
-    - _UseSoft: 0
+    - _UseSoft: 1
     - _ZWrite: 1
     - _ZWriteMode: 1
     m_Colors:
     - _Color: {r: 0, g: 0.17241406, b: 1, a: 1}
     - _CutoutColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FresnelColor: {r: 0, g: 1.006897, b: 2, a: 1}
+    - _FresnelColor: {r: 0, g: 1.6969905, b: 2, a: 1}
     - _HeightUVScrollDistort: {r: 1, g: 12, b: 0, a: 0}
     - _MainColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
     - _RimColor: {r: 0.41911763, g: 0.41911763, b: 0.41911763, a: 0.5}
     - _Speed: {r: 0, g: 5, b: 0, a: 0}
-    - _TintColor: {r: 0.25761536, g: 0.14489618, b: 0.49264705, a: 0.737}
+    - _TintColor: {r: 0.14489618, g: 0.43996114, b: 0.49264705, a: 0.737}

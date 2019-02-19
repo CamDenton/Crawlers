@@ -14,7 +14,9 @@ public class EnemyDamage : MonoBehaviour{
     NavMeshAgent agent;
     public EnemyMovement eMove;
     public StatusStates stateManager;
-    public AudioSource hitSound; 
+    public AudioSource hitSound;
+    public AudioSource deathSound;
+    bool isDead = false; 
     
     // Use this for initialization
     void Start () {
@@ -24,7 +26,6 @@ public class EnemyDamage : MonoBehaviour{
         thisEnemy = gameObject;
         agent = GetComponentInParent<NavMeshAgent>();
         stateManager = GetComponent<StatusStates>();
-        hitSound = gameObject.GetComponent<AudioSource>();
         healthBar.maxValue = eStats.MaxHealth;
         
     }
@@ -34,10 +35,10 @@ public class EnemyDamage : MonoBehaviour{
         healthBar.value = eStats.CurrentHealth;
 
 
-        if (eStats.CurrentHealth <= 0)
+        if (eStats.CurrentHealth <= 0 && isDead == false)
         {
             SendMessageUpwards("RemoveSpawn", SendMessageOptions.DontRequireReceiver);
-            Destroy(transform.parent.gameObject);
+            EnemDeath();
 
         }
     }
@@ -56,5 +57,12 @@ public class EnemyDamage : MonoBehaviour{
     {
         parentBody.AddRelativeForce(Vector3.left * 8, ForceMode.Force);
         agent.Move(agent.transform.right* -8);
+    }
+
+    public void EnemDeath()
+    {
+        isDead = true; 
+        deathSound.Play();
+        Destroy(transform.parent.gameObject, 1);
     }
 }

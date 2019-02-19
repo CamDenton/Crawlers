@@ -19,9 +19,14 @@ public class Rally : MonoBehaviour, Special {
     public GameObject effect;
     public LayerMask layer;
     public Animator anim;
+    public bool isEnabled = false; 
 
     public void Activate()
     {
+        if(isEnabled == true)
+        {
+
+        
         Instantiate(effect, playerV_2, Quaternion.identity);
         Collider[] targets = Physics.OverlapSphere(playerV, rallyRadius, layer, QueryTriggerInteraction.UseGlobal);
         stats.ChangeStamina(cost);
@@ -42,6 +47,7 @@ public class Rally : MonoBehaviour, Special {
         cDActive = true;
         anim.SetBool("Special 4", false);
         StartCoroutine(Ongoing(cooldown));
+        }
     }
 
     public void Cancel()
@@ -87,7 +93,7 @@ public class Rally : MonoBehaviour, Special {
         Debug.Log("Current Attack is " + stats.CurrentAttack);
         rallyPower = stats.CurrentAttack / 2;
 
-        if (Input.GetButtonDown(specialButton) && stats.CurrentStamina >= cost && cDActive == false)
+        if (Input.GetButtonDown(specialButton) && stats.CurrentStamina >= cost && cDActive == false && isEnabled == true)
         {
             anim.SetBool("Special 4", true);
             //Activate();

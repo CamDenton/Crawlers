@@ -22,7 +22,8 @@ public class ExplosiveRoar : MonoBehaviour, Special
     public GameObject currentHit;
     public PlayerStats stats;
     public Animator anim;
-    public GameObject effect; 
+    public GameObject effect;
+    public bool isEnabled = false;
 
 
     public void Activate()
@@ -94,9 +95,9 @@ public class ExplosiveRoar : MonoBehaviour, Special
         currentEffect = weapon.currentEffect;
         effectDuration = weapon.effectDuration;
         effectStrength = weapon.effectStrength;
-        strength = stats.CurrentAttack; 
+        strength = stats.CurrentAttack;
 
-        if (Input.GetButtonDown(specialButton) && stats.CurrentStamina >= cost && cDActive == false)
+        if (Input.GetButtonDown(specialButton) && stats.CurrentStamina >= cost && cDActive == false && isEnabled == true)
         {
             anim.SetBool("Special", true);
             

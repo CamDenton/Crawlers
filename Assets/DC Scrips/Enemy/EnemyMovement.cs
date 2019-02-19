@@ -9,15 +9,17 @@ public class EnemyMovement : MonoBehaviour {
     float playerX;
     float playerZ;
     bool playerDetected;
-    Vector3 playerPos;
+    public Vector3 playerPos;
     NavMeshAgent agent;
     CharacterController controller;
+    public AudioSource spriteNotice; 
     
    
 	// Use this for initialization
 	void Start () {
         eStats = gameObject.GetComponentInParent<EnemyStats>();
         agent = GetComponentInParent<NavMeshAgent>();
+        spriteNotice = GetComponent<AudioSource>();
         
         
         
@@ -49,12 +51,27 @@ public class EnemyMovement : MonoBehaviour {
         {
             playerDetected = true;
             player = coll.gameObject;
+            spriteNotice.Play();
+        }
+    }
+
+    private void OnTriggerStay(Collider coll)
+    {
+        if (coll.gameObject.tag == "Player")
+        {
+            playerDetected = true;
+            player = coll.gameObject;
+            
         }
     }
 
     void OnTriggerExit (Collider coll)
     {
-        playerDetected = false;
+        if (coll.gameObject.tag == "Player")
+        {
+            playerDetected = false;
+            
+        }
     }
 
     void Approach ()

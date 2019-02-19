@@ -924,7 +924,7 @@ GameObject:
   - component: {fileID: 81430239270654184}
   - component: {fileID: 114023415736302356}
   - component: {fileID: 114723284663303592}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: PlayerOneCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,8 +1171,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1418407792320136}
   m_LocalRotation: {x: -0, y: 0.717897, z: -0, w: 0.69614935}
-  m_LocalPosition: {x: 204.09, y: 116.7, z: 449.93}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 204.17738, y: 116.7, z: 452.13022}
+  m_LocalScale: {x: 1.1982265, y: 1.1982265, z: 1.1982265}
   m_Children:
   - {fileID: 4417928248299654}
   - {fileID: 4602176148658524}
@@ -2123,6 +2123,7 @@ MonoBehaviour:
   currentEffect: Burn
   effectDuration: 3
   effectStrength: 0
+  effectDamage: 0
   swingSound: {fileID: 82316519625320430}
 --- !u!114 &114101629650134890
 MonoBehaviour:
@@ -2520,6 +2521,9 @@ MonoBehaviour:
   stunnable: 0
   flammable: 0
   knockable: 0
+  buffable: 0
+  poisonable: 0
+  poisonCounter: 0
   parentObject: {fileID: 0}
 --- !u!114 &114519171284027066
 MonoBehaviour:

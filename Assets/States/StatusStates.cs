@@ -8,6 +8,8 @@ public class StatusStates : MonoBehaviour, IStunnable, IKnockable, IExplosive, I
     public bool stunnable;
     public bool flammable;
     public bool knockable;
+    public bool buffable;
+    public bool poisonable; 
     int pOldAttack;
     int eOldAttack;
     public float poisonCounter;
@@ -19,19 +21,28 @@ public class StatusStates : MonoBehaviour, IStunnable, IKnockable, IExplosive, I
     #region Stun System
     public void Stun(float duration)
     {
-        Debug.Log("Stun Activated");
-        if (gameObject.tag == "Player")
+        if(stunnable == true)
         {
-            gameObject.GetComponent<CharacterController>().enabled = false;
+            Debug.Log("Stun Activated");
+            if (gameObject.tag == "Player")
+            {
+                gameObject.GetComponent<CharacterController>().enabled = false;
+            }
+
+            else if (gameObject.tag == "Enemy")
+            {
+                Debug.Log("Enemy is Stunned");
+                parentObject.GetComponent<NavMeshAgent>().enabled = false;
+            }
+
+            StartCoroutine(StunReturn(duration));
         }
 
-        else if (gameObject.tag == "Enemy")
+        else
         {
-            Debug.Log("Enemy is Stunned");
-            parentObject.GetComponent<NavMeshAgent>().enabled = false;
-        }
 
-        StartCoroutine(StunReturn(duration));
+        }
+        
     }
 
     public IEnumerator StunReturn(float durationR)
@@ -112,10 +123,20 @@ public class StatusStates : MonoBehaviour, IStunnable, IKnockable, IExplosive, I
     #endregion
 
     #region Poison
+
     public void Poison(float duration, int power)
     {
-        poisonCounter = duration;
-        StartCoroutine(Curing(duration, power));
+        if(poisonable)
+        {
+            poisonCounter = duration;
+            StartCoroutine(Curing(duration, power));
+        }
+
+        else
+        {
+
+        }
+        
     }
 
     public IEnumerator Curing(float duration, int powerR)

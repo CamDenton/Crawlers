@@ -18,15 +18,21 @@ public class WaveBreak : MonoBehaviour, Special {
     CharacterController playerControl;
     GameObject newProjectile;
     public Animator anim;
+    public bool isEnabled = false;
 
 
     public void Activate()
     {
+        if(isEnabled == true)
+        {
+
         newProjectile = Instantiate(waveObj, parentPosition, instaPoint.transform.rotation);
         newProjectile.GetComponentInChildren<WBProjectile>().damage = fullDamage;
         anim.SetBool("Special 2", false);
         cDActive = true;
         StartCoroutine(Ongoing(cDown));
+
+        }
     }
 
     public void Cancel()
@@ -65,7 +71,7 @@ public class WaveBreak : MonoBehaviour, Special {
         stats = gameObject.GetComponent<PlayerStats>();
         fullDamage = baseDamage + (stats.CurrentAttack); 
 
-        if (Input.GetButtonDown(specialButton) && stats.CurrentStamina >= cost && cDActive == false)
+        if (Input.GetButtonDown(specialButton) && stats.CurrentStamina >= cost && cDActive == false && isEnabled == true)
         {
             anim.SetBool("Special 2", true);
         }

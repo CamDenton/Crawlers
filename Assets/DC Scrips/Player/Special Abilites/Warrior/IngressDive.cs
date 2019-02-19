@@ -23,15 +23,22 @@ public class IngressDive : MonoBehaviour, Special {
     CharacterController playerController;
     PlayerAttack weapon;
     public LayerMask layer;
+    public bool isEnabled = false; 
 
 
     public void Activate()
     {
-        anim.SetBool("Special 3", true);
-        leaping = true; 
-        stats.ChangeStamina(cost);
-        gameObject.tag = "Untagged";
-        cDActive = true;
+
+        if (isEnabled == true)
+        {
+
+
+            anim.SetBool("Special 3", true);
+            leaping = true;
+            stats.ChangeStamina(cost);
+            gameObject.tag = "Untagged";
+            cDActive = true;
+        }
 
     }
 
@@ -81,7 +88,7 @@ public class IngressDive : MonoBehaviour, Special {
         cooldown = 0;
         cost = 60;
         leapForce = 9f;
-        forwardLeapForce = 20f; 
+        forwardLeapForce = 20f;
 
         if (gameObject.GetComponent<PlayerMov>())
         {
@@ -107,7 +114,7 @@ public class IngressDive : MonoBehaviour, Special {
             playerController.Move((playerController.transform.forward * forwardLeapForce) * Time.deltaTime);
         }
 
-        if (Input.GetButtonDown(specialButton) && stats.CurrentStamina >= cost && cDActive == false)
+        if (Input.GetButtonDown(specialButton) && stats.CurrentStamina >= cost && cDActive == false && isEnabled == true)
         {
             Activate();
             

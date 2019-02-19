@@ -89,6 +89,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1061131327255320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4996449129160898}
+  - component: {fileID: 135040207406269182}
+  m_Layer: 0
+  m_Name: FrontofPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1089441072873990
 GameObject:
   m_ObjectHideFlags: 1
@@ -239,6 +255,7 @@ GameObject:
   - component: {fileID: 23644460234614924}
   - component: {fileID: 136016269217790624}
   - component: {fileID: 114357551476044126}
+  - component: {fileID: 82020079490569202}
   m_Layer: 0
   m_Name: Attack Capsule
   m_TagString: Untagged
@@ -680,6 +697,9 @@ GameObject:
   - component: {fileID: 114125349090634952}
   - component: {fileID: 114348051132577210}
   - component: {fileID: 114467431574592472}
+  - component: {fileID: 114156665192985898}
+  - component: {fileID: 114676585200200118}
+  - component: {fileID: 114507166184681976}
   m_Layer: 0
   m_Name: PlayerTestRogue
   m_TagString: Player
@@ -1398,6 +1418,7 @@ Transform:
   - {fileID: 224178529475235142}
   - {fileID: 224331285482506292}
   - {fileID: 4433546003064484}
+  - {fileID: 4996449129160898}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 91.093, z: 1.1}
@@ -1569,6 +1590,19 @@ Transform:
   m_Father: {fileID: 4178464264714360}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4996449129160898
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1061131327255320}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3, y: 19.9, z: 22.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4612122749419566}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &20569687991170842
 Camera:
   m_ObjectHideFlags: 1
@@ -1701,6 +1735,101 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1872244332122260}
   m_Enabled: 1
+--- !u!82 &82020079490569202
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1254783204308760}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d13275c454633b14d8b81edabc78cc2b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 80
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!92 &92668094461667662
 Behaviour:
   m_ObjectHideFlags: 1
@@ -1722,13 +1851,7 @@ Animator:
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed by
-    Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-    'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform
-    'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform
-    'mixamorig:RightHandIndex3'\n\tTransform 'mixamorig:RightFoot'\n\tand more ...\n\tFrom
-    animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -1873,7 +1996,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 114797828962100420}
   staminaBar: {fileID: 114167953428259228}
-  damagedImage: {fileID: 114218223320849276}
+  damagedImage: {fileID: 0}
+  isDead: 0
 --- !u!114 &114125479027185840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1913,7 +2037,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  itemImage: {fileID: 114983241428115740}
+  itemImage: {fileID: 0}
+--- !u!114 &114156665192985898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592910791104968}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af203a08edef05e43b2490768e9745e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poisonStr: 0
+  effectDuration: 0
+  cost: 0
+  cooldown: 0
+  cDActive: 0
+  stats: {fileID: 0}
+  effect: {fileID: 191348, guid: bce1a438a6b35f043b91ceeba6ca676f, type: 2}
+  anim: {fileID: 0}
 --- !u!114 &114161922763769218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2145,6 +2288,10 @@ MonoBehaviour:
   playerClass: 
   weapAtt: 0
   weapIntt: 0
+  armorInt: 0
+  weightInt: 0
+  attBuff: 0
+  playerSpeed: 0
 --- !u!114 &114357551476044126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2156,13 +2303,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1823ac60daf5ed54f84100a28f1ee86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackInt: 30
+  AttackInt: 0
   hasHit: 0
   attackButton: FireP1
   stats: {fileID: 0}
   currentEffect: 
   effectDuration: 0
   effectStrength: 0
+  effectDamage: 0
+  swingSound: {fileID: 82020079490569202}
 --- !u!114 &114380382682725714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2206,19 +2355,38 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1592910791104968}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a42a49a5f513b194e85d6213722f50a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialButton: SpecialP1
-  cost: 100
-  cooldown: 8
+  cost: 0
+  cooldown: 0
   cDActive: 0
   stats: {fileID: 0}
   anim: {fileID: 0}
   playerObject: {fileID: 0}
-  effect: {fileID: 191348, guid: bce1a438a6b35f043b91ceeba6ca676f, type: 2}
+  effect: {fileID: 148984, guid: 01019f96f557d804790cfb64c21c3a2f, type: 2}
+--- !u!114 &114507166184681976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592910791104968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a253e668bafd7054ba0ab16209648429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specialButton: 
+  cost: 50
+  beaconObj: {fileID: 1446207261338984, guid: 2f1591505208956469ad205dd0a3f4e6, type: 2}
+  beaconCount: []
+  cDown: 3
+  cDActive: 0
+  stats: {fileID: 0}
+  anim: {fileID: 0}
+  instaPoint: {fileID: 1061131327255320}
 --- !u!114 &114523412266506226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2320,6 +2488,32 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114676585200200118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592910791104968}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732d75afdeabee340bbd34395b7a1d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specialButton: 
+  cost: 50
+  bombObj: {fileID: 1952991886740296, guid: 346ddcd0de312ae45a8511d3932818e9, type: 2}
+  baseDamage: 10
+  fullDamage: 0
+  cDown: 3
+  cDActive: 0
+  instaPoint: {fileID: 1061131327255320}
+  stats: {fileID: 0}
+  instOffset: {x: 0, y: 0, z: 0}
+  anim: {fileID: 0}
+  currentEffect: 
+  effectDuration: 0
+  effectStrength: 0
+  effectDamage: 0
 --- !u!114 &114714878488552074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2449,7 +2643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d6ba07770a48a4bb22ac75bdfa5fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0
   currentSpeed: 0
   horizontal: HorizontalP1
   vertical: VerticalP1
@@ -2573,6 +2767,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1872244332122260}
   m_Enabled: 1
+--- !u!135 &135040207406269182
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1061131327255320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10.29
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136016269217790624
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2582,10 +2788,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 38.8
-  m_Height: 69.57
+  m_Radius: 51.33403
+  m_Height: 102.66804
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -12.534018, y: 0.0000014521995, z: 0.0005249791}
 --- !u!137 &137615071940521332
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -12,6 +12,7 @@ TagManager:
   - P4Spawn
   - P3Spawn
   - p4Spawn
+  - beacon
   layers:
   - Default
   - TransparentFX

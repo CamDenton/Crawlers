@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
-  m_FogMode: 2
-  m_FogDensity: 0.025
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.028
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -679,6 +679,11 @@ Prefab:
         type: 2}
       propertyPath: m_HandleRect
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 224992648761975312, guid: 213ccba5152852048ba23ac6a568af4f,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 213ccba5152852048ba23ac6a568af4f, type: 2}
